@@ -3,5 +3,6 @@
         autoCorrect = {false}   //---------> While using TextInput we can turnoff autocorrect while textinput as the name suggests
         />
 
-// Link to search react vector Icons - [ https://icons.expo.fyi/ ] - after searching the icon, liberary of the icon can be seen in front of it, which we will import in curly braces from '@expo/vector-icons'
+// Link to search react vector Icons - [ https://icons.expo.fyi/ ] - after searching the icon, liberary and the name of the icon can be seen in front of it, which we will import in curly braces from '@expo/vector-icons'
 // importing them in project     --> import { Feather } from '@expo/vector-icons'
+// To use them in elements <Feather name='search'/>
