@@ -1,0 +1,41 @@
+//useReducer
+import React, {useState} from 'react'
+
+//Here goes variable we want to change the state of near it goes the function we will use when we want to change the state the useState(0) assings counter with default value of 0
+let [counter, setCounter] = useState(0)
+
+
+
+// useReducer
+import React, { useReducer } from 'react'
+
+let [state, dispatch] = useReducer(reducer, {count: 0})
+
+// To use reducer we take state in destructuring in array inspite of variable in useState, near state, dispatch or whatever we want to call is function which executes the useState
+// In useReducer() we pass an fuction named anything (here, reducer) to define the state logic, and then goes our varible we want the state to work on with is inital value  
+// Below is the reducer function we named above in useReducer, this function is necessory and defines what we want to do with our counter state
+// in the function we need to pass the parameter state which we assigned in useReducer() that is {count: 0} and action which is the value we want the state to change with
+
+const reducer = (state, action) =>{
+  // the state in params look like state === {count: number}
+  // the state in params look like action === {type = 'incriment' || 'dicriment', payload: 1} 
+    switch (action.type){
+      case 'incriment':
+      // we need to assign new object and then spread the state value in it, after that we need to assing count again with what we want to change
+      return {...state, count: state.count + action.payload};
+      case 'dicriment':
+      return {...state, count: state.count - action.payload};
+      default:
+      //default is used in reducer because, we can also get an invalid action
+      // in reducer we always need to return something or there will be undifined error
+      return
+      
+    <View style={styles.button}>
+      <Button title='Increase' onPress={()=>{
+        dispatch({type: 'incriment', payload: 1})
+      }}/>
+    </View>
+    <View style={styles.button}>
+      <Button title='dicriment' onPress={()=>{
+        dispatch({type: 'dicriment', payload: 1})
+      }}/>
