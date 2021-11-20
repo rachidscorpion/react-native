@@ -1,4 +1,4 @@
-//useReducer
+//useState
 import React, {useState} from 'react'
 
 //Here goes variable we want to change the state of near it goes the function we will use when we want to change the state the useState(0) assings counter with default value of 0
