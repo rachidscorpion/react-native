@@ -1,8 +1,25 @@
 <TextInput style={styles.textinput}
         autoCapitalize ='none'  //---------> While using TextInput we can turnoff autocapitalisation while textinput
         autoCorrect = {false}   //---------> While using TextInput we can turnoff autocorrect while textinput as the name suggests
+        onEndEditing={()=>{console.log(val)}} //---------> After the user is done typing, when the tick button on the keyboard is tapped, this prop will execute.
         />
 
 // Link to search react vector Icons - [ https://icons.expo.fyi/ ] - after searching the icon, liberary and the name of the icon can be seen in front of it, which we will import in curly braces from '@expo/vector-icons'
 // importing them in project     --> import { Feather } from '@expo/vector-icons'
 // To use them in elements <Feather style={styles.icon} name='search' size={30}/>
+
+
+// API -- axios liberary
+// Install Dependency through terminal/cmd  -  npm install axios
+
+import axios from 'axios'
+
+// let api_key = "9hLQPZW1ao_TjXVCXMUVbBIBnoPHzuSW5Uw4xn4GT3cFqRsLmE_vhAb7Ofu0ndt48VLMFV2P1ye_fTk14F9CTOXG-Lel-dqxm3paKCN4tmcw62B-MI6dvOa0GhiZYXYx"
+// let client_id = "0-usw7p-hOfwCxGEuCjGew"
+
+export default axios.create({
+  baseURL: "https://api.yelp.com/v3/businesses",
+  headers:{
+    Authorizaton: 'Bearer 9hLQPZW1ao_TjXVCXMUVbBIBnoPHzuSW5Uw4xn4GT3cFqRsLmE_vhAb7Ofu0ndt48VLMFV2P1ye_fTk14F9CTOXG-Lel-dqxm3paKCN4tmcw62B-MI6dvOa0GhiZYXYx'
+  }
+})
