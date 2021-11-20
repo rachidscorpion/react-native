@@ -1,0 +1,5 @@
+<TextInput style={styles.textinput}
+        autoCapitalize ='none'  //---------> While using TextInput we can turnoff autocapitalisation while textinput
+        autoCorrect = {false}   //---------> While using TextInput we can turnoff autocorrect while textinput as the name suggests
+        />
+
