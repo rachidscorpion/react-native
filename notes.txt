@@ -5,4 +5,4 @@
 
 // Link to search react vector Icons - [ https://icons.expo.fyi/ ] - after searching the icon, liberary and the name of the icon can be seen in front of it, which we will import in curly braces from '@expo/vector-icons'
 // importing them in project     --> import { Feather } from '@expo/vector-icons'
-// To use them in elements <Feather name='search'/>
+// To use them in elements <Feather style={styles.icon} name='search' size={30}/>
