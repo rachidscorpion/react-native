@@ -24,10 +24,15 @@ const navigator = createStackNavigator(
   {
     Home: HomeScreen,
   },
-  {
+{
     initialRouteName: 'Home',
     defaultNavigationOptions: {
-      title: "My App"
+      title: "My App",
+       headerStyle: {
+      backgroundColor: '#222222',
+    },
+    headerTitleStyle: {
+     color: 'white'
     }
   }
 )
