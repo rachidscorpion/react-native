@@ -17,16 +17,16 @@
 
 
 import {createStackNavigator} from 'react-navigation-stack'
-import {createAppContainer} from 'react-navigation'
+import { createAppContainer } from 'react-navigation'
 import HomeScreen from './src/screens/HomeScreen'
 
 const navigator = createStackNavigator(
   {
-    Home: HomeScreen,
+    Home : HomeScreen
   },
-{
+  {
     initialRouteName: 'Home',
-    defaultNavigationOptions: {
+    defaultNavigationOptions:{
       title: "My App",
        headerStyle: {
       backgroundColor: '#222222',
@@ -35,6 +35,7 @@ const navigator = createStackNavigator(
      color: 'white'
     }
   }
+}
 )
 
 
